@@ -1,0 +1,22 @@
+{% extends './base.html.twig' %}
+
+
+ {% block body %}
+   <h1>Mis Parkings</h1>
+ 
+         <div class="row">
+            {% for solicitud in solicitudes %}
+               <div class="col-md-4">
+                  <div class="card" style="width: 18rem">
+                     <div class="card-body">
+                        <p class="card-test">Fecha Reserva: {{solicitud.fecha|date('d-m-Y')}}</p>
+                        <p class="card-test">Coche:{{solicitud.coche}}</p>
+                        <p class="card-test">Moto:{{solicitud.moto}}</p>
+                     </div>
+                  </div>
+               </div>    
+
+      {% endfor %}
+
+   </div>
+ {% endblock %}

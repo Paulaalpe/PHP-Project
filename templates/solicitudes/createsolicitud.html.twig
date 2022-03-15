@@ -1,0 +1,11 @@
+{% extends './base.html.twig' %}
+
+
+ {% block body %}
+ <div class="formulario"> 
+    {{form_start(solicitudForm)}}
+    {{form_widget(solicitudForm)}}
+    <button class="btn btn-lg btn-warning" type="submit">Pedir plaza </button>
+    {{form_end(solicitudForm)}}
+</div>
+ {% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+
+ <div class="container4">
+    <div class="formulario">
+            <form method="post">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+
+                {% if app.user %}
+                    <div class="mb-3">
+                        You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                    </div>
+                {% endif %}
+
+                <h1>Accede tu cuenta</h1>
+                <p>Para solicitar plazas de parking debes acceder a tu cuenta</p>
+                <label for="inputEmail">Correo electrónico</label>
+                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+                <label for="inputPassword">Contraseña</label>
+                <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+                <input type="hidden" name="_csrf_token"
+                    value="{{ csrf_token('authenticate') }}"
+                >
+
+                {#
+                    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                    See https://symfony.com/doc/current/security/remember_me.html #}
+
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" name="_remember_me"> Quiero seguir logado
+                        </label>
+                       <label>
+                            <input type="checkbox" name="acepto"> Acepto Aviso legal y Política de Privacidad
+                        </label>
+                    </div>
+               
+
+                <button class="btn btn-lg btn-warning" type="submit">
+                    Acceder ahora
+                </button>
+            </form>
+       
+        </div>
+
+        
+</div>  
+        <div class="incentivo">
+            <p>¿Aún no tienes cuenta?</p>
+            <a href="{{ path("registro")}}" class="btn btn-light">¡Regístrate ahora!</a>
+        </div>
+{% endblock %}

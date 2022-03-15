@@ -1,0 +1,20 @@
+{% extends './base.html.twig' %}
+
+
+ {% block body %}
+   <h1>Crea tu cuenta</h1>
+   <div class="formulario"> 
+      {{form_start(userForm)}}
+      {{form_widget(userForm)}}
+
+      
+      <button class="btn btn-lg btn-warning" type="submit">Registrar</button>
+      {{form_end(userForm)}}
+    </div>
+
+
+ 
+ 
+ 
+ 
+ {% endblock %}

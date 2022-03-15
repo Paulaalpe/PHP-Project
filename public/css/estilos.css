@@ -1,0 +1,118 @@
+body {
+    background-color:#F05742;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: 10px;
+ 
+    color: whitesmoke;
+}
+
+h2 {
+    margin-bottom: 50px;
+}
+
+form {
+    width: 400px
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    margin-top: 20px
+}
+
+input {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+p {
+    color: antiquewhite;
+    text-align: center;
+    margin-right: 10px;
+
+}
+ul {
+    margin-top:40px;
+}
+
+li {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+
+.container3, .imagen-hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #100806;
+    margin: 50px;
+}
+
+.container4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.formulario  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.incentivo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin-top:50px
+}
+
+.card {
+    margin-left:20px
+
+}
+
+.card2 {
+    background-color: f05742;
+ 
+    
+}
+
+.card-body {
+    background-color: #f05742;
+    margin-left: 10px;
+    border:1px dashed white;
+}
+
+.card-test {
+    font-weight:bolder
+}
+
+.row {
+    margin-top: 50px;
+    
+}
+
+.usuario {
+    text-align: center;
+    text-transform: capitalize;
+    color: red;
+    margin-left: 50px;
+}
+
+.div-usuario {
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
